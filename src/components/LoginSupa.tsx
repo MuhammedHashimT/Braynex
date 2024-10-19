@@ -13,37 +13,50 @@ const Login: React.FC = () => {
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     setError(null);
-
+  
     try {
+      console.log(email, password, userType);
+      // Sign in the user
       const { data, error } = await supabase.auth.signInWithPassword({
         email,
         password,
       });
-
+  
       if (error) throw error;
-
+  
       if (data.user) {
         // Check user type and redirect accordingly
-        const { data: userData, error: userError } = await supabase
-          .from(userType)
+        let userTable = userType; // "admin", "mentor", or "student"
+        let userData;
+  
+        // Fetch user data from the appropriate table based on userType
+        const { data: fetchedUserData, error: userError } = await supabase
+          .from(userTable)
           .select("*")
           .eq("email", email)
           .single();
-
-        if (userError) throw userError;
-
+  
+        if (userError) {
+          // Handle user error (for example, user not found in the specified table)
+          if (userError.message.includes("no rows")) {
+            throw new Error(`User not found in ${userTable} table`);
+          }
+          throw userError;
+        }
+  
+        userData = fetchedUserData;
+  
         if (userData) {
           console.log(`Logged in as ${userType}:`, userData);
           // Redirect to appropriate dashboard based on user type
-          // You can implement this part based on your routing setup
-        } else {
-          throw new Error(`User not found in ${userType} table`);
+          // Implement your routing logic here
         }
       }
     } catch (error) {
       setError((error as Error).message);
     }
   };
+  
 
   return (
     <div>
