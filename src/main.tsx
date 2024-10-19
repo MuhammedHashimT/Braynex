@@ -5,6 +5,8 @@ import './index.css'
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import LoginPage from './components/Login.tsx';
 import ErrorPage from './components/Error.tsx';
+import StudentDashboard from './routes/StudentDashboard.tsx';
+import QuizPage from './routes/Quiz.tsx';
 
 const router = createBrowserRouter([
   {
@@ -17,6 +19,16 @@ const router = createBrowserRouter([
     element: <LoginPage />,
     errorElement: <ErrorPage />,
   },
+  {
+    path: "/dashboard",
+    element: <StudentDashboard />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/quiz",
+    element: <QuizPage />,
+    errorElement: <ErrorPage />,
+  }
 ])
 
 createRoot(document.getElementById('root')!).render(
