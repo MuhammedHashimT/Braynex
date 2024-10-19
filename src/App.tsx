@@ -26,7 +26,7 @@ function App() {
             </div>
             <div className="flex gap-2">
               <button
-                className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#2094f3] text-slate-50 text-sm font-bold leading-normal tracking-[0.015em]"
+                className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-primary-blue text-slate-50 text-sm font-bold leading-normal tracking-[0.015em]"
               >
                 <span className="truncate">Sign up</span>
               </button>
@@ -57,7 +57,7 @@ function App() {
                     </h2>
                   </div>
                   <button
-                    className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#2094f3] text-slate-50 text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]"
+                    className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-primary-blue text-slate-50 text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]"
                   >
                     <span className="truncate">Get started</span>
                   </button>
@@ -81,7 +81,7 @@ function App() {
                   </div>
                   <div className="flex flex-col gap-1">
                     <h2 className="text-[#0d151c] text-base font-bold leading-tight">Find your path</h2>
-                    <p className="text-[#49779c] text-sm font-normal leading-normal">Explore careers and find the right fit for you</p>
+                    <p className="text-[#2094f3] text-sm font-normal leading-normal">Explore careers and find the right fit for you</p>
                   </div>
                 </div>
                 <div className="flex flex-1 gap-3 rounded-lg border border-[#cedde8] bg-slate-50 p-4 flex-col">
@@ -94,7 +94,7 @@ function App() {
                   </div>
                   <div className="flex flex-col gap-1">
                     <h2 className="text-[#0d151c] text-base font-bold leading-tight">Get personalized advice</h2>
-                    <p className="text-[#49779c] text-sm font-normal leading-normal">Work 1:1 with pros who have been in your shoes</p>
+                    <p className="text-[#2094f3] text-sm font-normal leading-normal">Work 1:1 with pros who have been in your shoes</p>
                   </div>
                 </div>
                 <div className="flex flex-1 gap-3 rounded-lg border border-[#cedde8] bg-slate-50 p-4 flex-col">
@@ -107,7 +107,7 @@ function App() {
                   </div>
                   <div className="flex flex-col gap-1">
                     <h2 className="text-[#0d151c] text-base font-bold leading-tight">Meet your mentors</h2>
-                    <p className="text-[#49779c] text-sm font-normal leading-normal">Connect with experienced professionals who can help you grow</p>
+                    <p className="text-[#2094f3] text-sm font-normal leading-normal">Connect with experienced professionals who can help you grow</p>
                   </div>
                 </div>
                 <div className="flex flex-1 gap-3 rounded-lg border border-[#cedde8] bg-slate-50 p-4 flex-col">
@@ -120,7 +120,7 @@ function App() {
                   </div>
                   <div className="flex flex-col gap-1">
                     <h2 className="text-[#0d151c] text-base font-bold leading-tight">Land your dream job</h2>
-                    <p className="text-[#49779c] text-sm font-normal leading-normal">Get support at every stage of your job search</p>
+                    <p className="text-[#2094f3] text-sm font-normal leading-normal">Get support at every stage of your job search</p>
                   </div>
                 </div>
                 <div className="flex flex-1 gap-3 rounded-lg border border-[#cedde8] bg-slate-50 p-4 flex-col">
@@ -133,7 +133,7 @@ function App() {
                   </div>
                   <div className="flex flex-col gap-1">
                     <h2 className="text-[#0d151c] text-base font-bold leading-tight">Master your craft</h2>
-                    <p className="text-[#49779c] text-sm font-normal leading-normal">Deepen your skills with hands-on projects and exercises</p>
+                    <p className="text-[#2094f3] text-sm font-normal leading-normal">Deepen your skills with hands-on projects and exercises</p>
                   </div>
                 </div>
                 <div className="flex flex-1 gap-3 rounded-lg border border-[#cedde8] bg-slate-50 p-4 flex-col">
@@ -146,7 +146,7 @@ function App() {
                   </div>
                   <div className="flex flex-col gap-1">
                     <h2 className="text-[#0d151c] text-base font-bold leading-tight">Level up with projects</h2>
-                    <p className="text-[#49779c] text-sm font-normal leading-normal">Put your new skills to the test with real-world projects</p>
+                    <p className="text-[#2094f3] text-sm font-normal leading-normal">Put your new skills to the test with real-world projects</p>
                   </div>
                 </div>
               </div>
@@ -159,7 +159,7 @@ function App() {
                 ></div>
                 <div>
                   <p className="text-[#0d151c] text-base font-medium leading-normal">Graphic designer</p>
-                  <p className="text-[#49779c] text-sm font-normal leading-normal">$70k - $110k</p>
+                  <p className="text-[#2094f3] text-sm font-normal leading-normal">$70k - $110k</p>
                 </div>
               </div>
               <div className="flex flex-col gap-3 pb-3">
@@ -169,7 +169,7 @@ function App() {
                 ></div>
                 <div>
                   <p className="text-[#0d151c] text-base font-medium leading-normal">Product manager</p>
-                  <p className="text-[#49779c] text-sm font-normal leading-normal">$85k - $130k</p>
+                  <p className="text-[#2094f3] text-sm font-normal leading-normal">$85k - $130k</p>
                 </div>
               </div>
               <div className="flex flex-col gap-3 pb-3">
@@ -179,7 +179,7 @@ function App() {
                 ></div>
                 <div>
                   <p className="text-[#0d151c] text-base font-medium leading-normal">Data analyst</p>
-                  <p className="text-[#49779c] text-sm font-normal leading-normal">$60k - $100k</p>
+                  <p className="text-[#2094f3] text-sm font-normal leading-normal">$60k - $100k</p>
                 </div>
               </div>
               <div className="flex flex-col gap-3 pb-3">
@@ -189,7 +189,7 @@ function App() {
                 ></div>
                 <div>
                   <p className="text-[#0d151c] text-base font-medium leading-normal">Software engineer</p>
-                  <p className="text-[#49779c] text-sm font-normal leading-normal">$80k - $120k</p>
+                  <p className="text-[#2094f3] text-sm font-normal leading-normal">$80k - $120k</p>
                 </div>
               </div>
               <div className="flex flex-col gap-3 pb-3">
@@ -199,7 +199,7 @@ function App() {
                 ></div>
                 <div>
                   <p className="text-[#0d151c] text-base font-medium leading-normal">UX designer</p>
-                  <p className="text-[#49779c] text-sm font-normal leading-normal">$75k - $115k</p>
+                  <p className="text-[#2094f3] text-sm font-normal leading-normal">$75k - $115k</p>
                 </div>
               </div>
               <div className="flex flex-col gap-3 pb-3">
@@ -209,7 +209,7 @@ function App() {
                 ></div>
                 <div>
                   <p className="text-[#0d151c] text-base font-medium leading-normal">Marketing manager</p>
-                  <p className="text-[#49779c] text-sm font-normal leading-normal">$65k - $105k</p>
+                  <p className="text-[#2094f3] text-sm font-normal leading-normal">$65k - $105k</p>
                 </div>
               </div>
             </div>

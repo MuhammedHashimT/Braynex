@@ -14,13 +14,13 @@ export default function ErrorPage() {
         `}
       </style>
       <div className="text-center">
-        <h1 className="text-6xl font-bold text-[#64D0E8] mb-4">Oops!</h1>
+        <h1 className="text-6xl font-bold text-primary-green mb-4">Oops!</h1>
         <p className="text-2xl text-gray-600 mb-8">Something went wrong on our end.</p>
         
         <div className="w-64 h-64 mx-auto mb-8">
           <svg
             viewBox="0 0 100 100"
-            className="stroke-[#64D0E8] fill-none stroke-2"
+            className="stroke-primary-green fill-none stroke-2"
           >
             <circle cx="50" cy="50" r="45" className="animate-pulse" />
             <path
@@ -29,8 +29,8 @@ export default function ErrorPage() {
               strokeDasharray="80"
               strokeDashoffset="80"
             />
-            <circle cx="35" cy="40" r="5" className="fill-[#120309]" />
-            <circle cx="65" cy="40" r="5" className="fill-[#120309]" />
+            <circle cx="35" cy="40" r="5" className="fill-[white]" />
+            <circle cx="65" cy="40" r="5" className="fill-[white]" />
             <path
               d="M 30 60 Q 50 80 70 60"
               className="animate-[dash_1.5s_ease-in-out_infinite_0.5s]"
@@ -46,7 +46,7 @@ export default function ErrorPage() {
         
         <Link
           to="/"
-          className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-[#64D0E8] hover:bg-[#120309] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#64D0E8] transition-colors duration-200"
+          className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary-green hover:bg-[#120309] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-green transition-colors duration-200"
         >
           <HomeIcon className="mr-2 h-5 w-5" />
           Go back home
