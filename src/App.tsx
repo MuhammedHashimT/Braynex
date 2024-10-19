@@ -44,7 +44,7 @@ function App() {
               <div className="@[480px]:p-4">
                 <div
                   className="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-4"
-                  style={{backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://cdn.usegalileo.ai/sdxl10/d7ab87ec-6096-4b02-ad1d-d2fd0443d719.png");'}}
+                  style={{backgroundImage: 'linear-gradient(rgba(0, 4, 1, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://cdn.usegalileo.ai/sdxl10/d7ab87ec-6096-4b02-ad1d-d2fd0443d719.png");'}}
                 >
                   <div className="flex flex-col gap-2 text-center">
                     <h1
