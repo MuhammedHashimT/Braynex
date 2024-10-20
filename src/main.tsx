@@ -6,6 +6,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import LoginPage from "./components/Login.tsx";
 import ErrorPage from "./components/Error.tsx";
 import { AuthProvider } from "./context/AuthContext.tsx";
+import Login from "./components/LoginSupa.tsx";
 import StudentDashboard from './routes/StudentDashboard.tsx';
 import QuizPage from './routes/Quiz.tsx';
 import Leaderboard from "./routes/LeaderBoard.tsx";
@@ -26,7 +27,6 @@ const router = createBrowserRouter([
     element: <LoginPage />,
     errorElement: <ErrorPage />,
   },
-
   {
     path: "/dashboard",
     element: <StudentDashboard />,
@@ -36,11 +36,42 @@ const router = createBrowserRouter([
     path: "/quiz",
     element: <QuizPage />,
     errorElement: <ErrorPage />,
+  },
+  {
+    path: "/Leaderboard",
+    element: <Leaderboard />,
+    errorElement: <ErrorPage />,
+  },
+  // user/:id
+  {
+    path: "/user/:id",
+    element: <UserProfile />,
+    errorElement: <ErrorPage />,  
+  },
+  {
+    path: "/task",
+    element: <TaskPage />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/celebrate",
+    element: <CelebrationExample />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/admin",
+    element: <AdminDashboard />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/signup",
+    element: <SignupPage />,
+    errorElement: <ErrorPage />,
   }
 ]);
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <RouterProvider router={router} />
+      <RouterProvider router={router} />
   </StrictMode>
 );
