@@ -60,7 +60,7 @@ export default function SignupPage() {
         const newAnswers = [...answers]
         newAnswers[step - 1] = e.target.value
         setAnswers(newAnswers)
-      }
+    }
 
     const goToDashboard = () => {
         navigate('/dashboard')
@@ -245,7 +245,7 @@ export default function SignupPage() {
                         </motion.div>
                     )}
 
-                    {step > 0 && step <= questions.length  && !loading && !mentorMatch && (
+                    {step > 0 && step <= questions.length && !loading && !mentorMatch && (
 
                         <motion.div
                             key="questionsForm"
