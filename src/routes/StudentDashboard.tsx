@@ -2,7 +2,9 @@
 
 import React, { useState, useEffect } from 'react'
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts'
-import { ChevronUp, Award, Trophy, Book, Star, ChevronDown, CheckCircle, XCircle } from 'lucide-react'
+import { ChevronUp, Award, Trophy, Book, Star, ChevronDown, CheckCircle, XCircle, MessageCircle, ChevronRight } from 'lucide-react'
+import { useNavigate } from 'react-router-dom'
+import Header from '../components/Header'
 
 const subjects = [
   { name: "Mathematics", progress: 75, color: "#1cb0f6" },
@@ -21,11 +23,11 @@ const generateWeekData = () => {
 }
 
 const leaderboardData = [
-  { name: "Alex", points: 1250, avatar: "/placeholder.svg?height=40&width=40" },
-  { name: "Emma", points: 1180, avatar: "/placeholder.svg?height=40&width=40" },
-  { name: "Michael", points: 1050, avatar: "/placeholder.svg?height=40&width=40" },
-  { name: "Sophia", points: 980, avatar: "/placeholder.svg?height=40&width=40" },
-  { name: "Daniel", points: 920, avatar: "/placeholder.svg?height=40&width=40" },
+  { name: "Alex", points: 1250, avatar: "/avt-3.png" },
+  { name: "Emma", points: 1180, avatar: "/avt-3.png" },
+  { name: "Michael", points: 1050, avatar: "/avt-3.png" },
+  { name: "Sophia", points: 980, avatar: "/avt-3.png" },
+  { name: "Daniel", points: 920, avatar: "/avt-3.png" },
 ]
 
 const badges = [
@@ -35,18 +37,25 @@ const badges = [
 ]
 
 const uncompletedTasks = [
-  { name: "Complete Math Quiz", progress: 75 },
-  { name: "Read History Chapter 5", progress: 30 },
-  { name: "Submit Science Project", progress: 0 },
+  { name: "Complete Math Quiz", progress: 75, subject: "Mathematics" },
+  { name: "Read History Chapter 5", progress: 30, subject: "History" },
+  { name: "Submit Science Project", progress: 0, subject: "Science" },
+  { name: "Write Literature Essay", progress: 50, subject: "Literature" },
+  { name: "Complete Coding Challenge", progress: 20, subject: "Computer Science" },
 ]
 
-export default function StudentDashboard() {
+export default function EnhancedStudentDashboard() {
   const [points, setPoints] = useState(1120)
   const [streak, setStreak] = useState(5)
   const [rank, setRank] = useState(0)
   const [selectedSubject, setSelectedSubject] = useState(subjects[0])
   const [weekData, setWeekData] = useState(generateWeekData())
   const [animatingBadge, setAnimatingBadge] = useState(null)
+  const [showAllLeaderboard, setShowAllLeaderboard] = useState(false)
+  const [showAllTasks, setShowAllTasks] = useState(false)
+  const [showMentorMessage, setShowMentorMessage] = useState(false)
+
+  const navigate = useNavigate()
 
   useEffect(() => {
     const newLeaderboard = [...leaderboardData, { name: "You", points: points, avatar: "/placeholder.svg?height=40&width=40" }]
@@ -66,12 +75,18 @@ export default function StudentDashboard() {
     setTimeout(() => setAnimatingBadge(null), 1000)
   }
 
+  const getNextFocusRecommendation = () => {
+    const lowestProgressTask = uncompletedTasks.reduce((min, task) => task.progress < min.progress ? task : min)
+    return `Focus on ${lowestProgressTask.subject}: ${lowestProgressTask.name}`
+  }
+
   return (
-    <div className="min-h-screen bg-gray-100 p-4 sm:p-6 lg:p-8 font-sans">
+    <div className="min-h-screen bg-gray-100 font-sans">
+        <Header/>
       <div className="max-w-7xl mx-auto">
-        <header className="bg-white rounded-lg shadow-sm p-6 mb-6 flex flex-wrap justify-between items-center">
+        <header className="bg-white rounded-lg mt-10 shadow-sm p-6 mb-6 flex flex-wrap justify-between items-center">
           <div className="flex items-center mb-4 sm:mb-0">
-            <img src="/placeholder.svg?height=64&width=64" alt="Student" className="w-16 h-16 rounded-full mr-4" />
+            <img src="/avt-2.png" alt="Student" className="w-16 h-16 rounded-full mr-4" />
             <div>
               <h1 className="text-2xl font-bold text-gray-900">Welcome back, Student!</h1>
               <p className="text-gray-600">Keep up the great work!</p>
@@ -135,7 +150,7 @@ export default function StudentDashboard() {
             <div className="bg-white rounded-lg shadow-sm p-6">
               <h2 className="text-xl font-semibold mb-4">Uncompleted Tasks</h2>
               <div className="space-y-4">
-                {uncompletedTasks.map((task) => (
+                {(uncompletedTasks.slice(0, 3)).map((task) => (
                   <div key={task.name} className="flex items-center justify-between">
                     <div className="flex items-center">
                       {task.progress > 0 ? (
@@ -154,6 +169,15 @@ export default function StudentDashboard() {
                   </div>
                 ))}
               </div>
+              {uncompletedTasks.length > 3 && (
+                <button
+                  onClick={() => navigate('/task')}
+                  className="mt-4 text-[#1cb0f6] hover:underline flex items-center"
+                >
+                  {showAllTasks ? 'View Less' : 'View More'}
+                  <ChevronRight className="ml-1" />
+                </button>
+              )}
             </div>
           </div>
 
@@ -161,7 +185,7 @@ export default function StudentDashboard() {
             <div className="bg-white rounded-lg shadow-sm p-6">
               <h2 className="text-xl font-semibold mb-4">Leaderboard</h2>
               <ol className="space-y-2">
-                {leaderboardData.map((user, index) => (
+                {(showAllLeaderboard ? leaderboardData : leaderboardData.slice(0, 5)).map((user, index) => (
                   <li key={user.name} className={`flex items-center space-x-3 p-2 rounded-lg ${user.name === 'You' ? 'bg-[#1cb0f6] text-white' : ''}`}>
                     <span className="font-semibold w-6">{index + 1}.</span>
                     <img src={user.avatar} alt={user.name} className="w-10 h-10 rounded-full" />
@@ -169,7 +193,7 @@ export default function StudentDashboard() {
                     <span className="font-semibold">{user.points}</span>
                   </li>
                 ))}
-                {rank > leaderboardData.length && (
+                {rank > 5 && !showAllLeaderboard && (
                   <li className="flex items-center space-x-3 p-2 rounded-lg bg-[#1cb0f6] text-white">
                     <span className="font-semibold w-6">{rank}.</span>
                     <img src="/placeholder.svg?height=40&width=40" alt="You" className="w-10 h-10 rounded-full" />
@@ -178,6 +202,15 @@ export default function StudentDashboard() {
                   </li>
                 )}
               </ol>
+              { (
+                <button
+                  onClick={() => navigate('/leaderboard')}
+                  className="mt-4 text-[#1cb0f6] hover:underline flex items-center"
+                >
+                  {showAllLeaderboard ? 'View Less' : 'View More'}
+                  <ChevronRight className="ml-1" />
+                </button>
+              )}
             </div>
 
             <div className="bg-white rounded-lg shadow-sm p-6">
@@ -199,7 +232,30 @@ export default function StudentDashboard() {
             </div>
 
             <div className="bg-white rounded-lg shadow-sm p-6">
-              <h2 className="text-xl font-semibold mb-4">Practice Now</h2>
+              <h2 className="text-xl font-semibold mb-4">Connect with Mentor</h2>
+              <div className="flex items-center space-x-4 mb-4">
+                <img src="/mentor.png" alt="Mentor" className="w-16 h-16 rounded-full" />
+                <div>
+                  <h3 className="font-semibold">Dr. Smith</h3>
+                  <p className="text-sm text-gray-600">Mathematics Expert</p>
+                </div>
+              </div>
+              <button
+                onClick={() => setShowMentorMessage(!showMentorMessage)}
+                className="w-full bg-[#1cb0f6] hover:bg-[#0c9fe6] text-white py-2 rounded-lg transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-[#1cb0f6] focus:ring-opacity-50 flex items-center justify-center"
+              >
+                <MessageCircle className="mr-2" />
+                Message Mentor
+              </button>
+              {showMentorMessage && (
+                <div className="mt-4 p-4 bg-gray-100 rounded-lg">
+                  <p className="text-sm text-gray-800">{getNextFocusRecommendation()}</p>
+                </div>
+              )}
+            </div>
+
+            <div className="bg-white rounded-lg shadow-sm p-6">
+              <h2 className="text-xl font-semibold  mb-4">Practice Now</h2>
               <div className="space-y-4">
                 <p className="text-gray-600">Choose a subject to practice:</p>
                 <div className="flex flex-wrap gap-2">
