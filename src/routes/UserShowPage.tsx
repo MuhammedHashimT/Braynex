@@ -22,6 +22,7 @@ export default function UserProfile() {
     setTimeout(() => {
       setIsConnecting(false)
       alert("Connection request sent!")
+      
     }, 1000)
   }
 
