@@ -14,6 +14,7 @@ import UserProfile from "./routes/UserShowPage.tsx";
 import TaskPage from "./routes/TaskPage.tsx";
 import { CelebrationExample } from "./routes/Celebration.tsx";
 import AdminDashboard from './routes/AdminDashboard.tsx';
+import SignupPage from "./routes/Signup.tsx";
 
 const router = createBrowserRouter([
   {
@@ -60,7 +61,12 @@ const router = createBrowserRouter([
   {
     path: "/admin",
     element: <AdminDashboard />,
-    // errorElement: <ErrorPage />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/signup",
+    element: <SignupPage />,
+    errorElement: <ErrorPage />,
   }
 ]);
 
