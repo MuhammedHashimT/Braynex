@@ -245,7 +245,7 @@ export default function SignupPage() {
                         </motion.div>
                     )}
 
-                    {step > 0 && step <= questions.length && (
+                    {step > 0 && step <= questions.length  && !loading && !mentorMatch && (
 
                         <motion.div
                             key="questionsForm"
