@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react'
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts'
 import { ChevronUp, Award, Trophy, Book, Star, ChevronDown, CheckCircle, XCircle, MessageCircle, ChevronRight } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
+import Header from '../components/Header'
 
 const subjects = [
   { name: "Mathematics", progress: 75, color: "#1cb0f6" },
@@ -22,11 +23,11 @@ const generateWeekData = () => {
 }
 
 const leaderboardData = [
-  { name: "Alex", points: 1250, avatar: "/placeholder.svg?height=40&width=40" },
-  { name: "Emma", points: 1180, avatar: "/placeholder.svg?height=40&width=40" },
-  { name: "Michael", points: 1050, avatar: "/placeholder.svg?height=40&width=40" },
-  { name: "Sophia", points: 980, avatar: "/placeholder.svg?height=40&width=40" },
-  { name: "Daniel", points: 920, avatar: "/placeholder.svg?height=40&width=40" },
+  { name: "Alex", points: 1250, avatar: "/avt-3.png" },
+  { name: "Emma", points: 1180, avatar: "/avt-3.png" },
+  { name: "Michael", points: 1050, avatar: "/avt-3.png" },
+  { name: "Sophia", points: 980, avatar: "/avt-3.png" },
+  { name: "Daniel", points: 920, avatar: "/avt-3.png" },
 ]
 
 const badges = [
@@ -80,11 +81,12 @@ export default function EnhancedStudentDashboard() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-100 p-4 sm:p-6 lg:p-8 font-sans">
+    <div className="min-h-screen bg-gray-100 font-sans">
+        <Header/>
       <div className="max-w-7xl mx-auto">
-        <header className="bg-white rounded-lg shadow-sm p-6 mb-6 flex flex-wrap justify-between items-center">
+        <header className="bg-white rounded-lg mt-10 shadow-sm p-6 mb-6 flex flex-wrap justify-between items-center">
           <div className="flex items-center mb-4 sm:mb-0">
-            <img src="/placeholder.svg?height=64&width=64" alt="Student" className="w-16 h-16 rounded-full mr-4" />
+            <img src="/avt-2.png" alt="Student" className="w-16 h-16 rounded-full mr-4" />
             <div>
               <h1 className="text-2xl font-bold text-gray-900">Welcome back, Student!</h1>
               <p className="text-gray-600">Keep up the great work!</p>
@@ -232,7 +234,7 @@ export default function EnhancedStudentDashboard() {
             <div className="bg-white rounded-lg shadow-sm p-6">
               <h2 className="text-xl font-semibold mb-4">Connect with Mentor</h2>
               <div className="flex items-center space-x-4 mb-4">
-                <img src="/placeholder.svg?height=64&width=64" alt="Mentor" className="w-16 h-16 rounded-full" />
+                <img src="/mentor.png" alt="Mentor" className="w-16 h-16 rounded-full" />
                 <div>
                   <h3 className="font-semibold">Dr. Smith</h3>
                   <p className="text-sm text-gray-600">Mathematics Expert</p>
