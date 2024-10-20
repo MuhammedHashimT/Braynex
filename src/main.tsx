@@ -15,6 +15,7 @@ import TaskPage from "./routes/TaskPage.tsx";
 import { CelebrationExample } from "./routes/Celebration.tsx";
 import AdminDashboard from './routes/AdminDashboard.tsx';
 import SignupPage from "./routes/Signup.tsx";
+import StudentChat from "./routes/Chat.tsx";
 
 const router = createBrowserRouter([
   {
@@ -66,6 +67,11 @@ const router = createBrowserRouter([
   {
     path: "/signup",
     element: <SignupPage />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/chat",
+    element: <StudentChat />,
     errorElement: <ErrorPage />,
   }
 ]);
