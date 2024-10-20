@@ -7,6 +7,7 @@ import LoginPage from './components/Login.tsx';
 import ErrorPage from './components/Error.tsx';
 import StudentDashboard from './routes/StudentDashboard.tsx';
 import QuizPage from './routes/Quiz.tsx';
+import AdminDashboard from './routes/AdminDashboard.tsx';
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,11 @@ const router = createBrowserRouter([
     path: "/quiz",
     element: <QuizPage />,
     errorElement: <ErrorPage />,
+  },
+  {
+    path: "/admin",
+    element: <AdminDashboard />,
+    // errorElement: <ErrorPage />,
   }
 ])
 
