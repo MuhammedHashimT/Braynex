@@ -6,16 +6,16 @@ import { Link } from 'react-router-dom'
 import Header from '../components/Header'
 
 const leaderboardData = [
-  { id: 1, name: "Alex", points: 1250, avatar: "/placeholder.svg?height=40&width=40" },
-  { id: 2, name: "Emma", points: 1180, avatar: "/placeholder.svg?height=40&width=40" },
-  { id: 3, name: "Michael", points: 1050, avatar: "/placeholder.svg?height=40&width=40" },
-  { id: 4, name: "Sophia", points: 980, avatar: "/placeholder.svg?height=40&width=40" },
-  { id: 5, name: "Daniel", points: 920, avatar: "/placeholder.svg?height=40&width=40" },
-  { id: 6, name: "Olivia", points: 890, avatar: "/placeholder.svg?height=40&width=40" },
-  { id: 7, name: "William", points: 850, avatar: "/placeholder.svg?height=40&width=40" },
-  { id: 8, name: "Ava", points: 820, avatar: "/placeholder.svg?height=40&width=40" },
-  { id: 9, name: "James", points: 800, avatar: "/placeholder.svg?height=40&width=40" },
-  { id: 10, name: "Isabella", points: 780, avatar: "/placeholder.svg?height=40&width=40" },
+  { id: 1, name: "Alex", points: 1250, avatar: "https://cdn3d.iconscout.com/3d/premium/thumb/boy-avatar-3d-icon-download-in-png-blend-fbx-gltf-file-formats--boys-male-man-pack-avatars-icons-5187865.png?f=webp" },
+  { id: 2, name: "Emma", points: 1180, avatar: "https://cdn3d.iconscout.com/3d/premium/thumb/boy-avatar-3d-icon-download-in-png-blend-fbx-gltf-file-formats--boys-male-man-pack-avatars-icons-5187865.png?f=webp" },
+  { id: 3, name: "Michael", points: 1050, avatar: "https://cdn3d.iconscout.com/3d/premium/thumb/boy-avatar-3d-icon-download-in-png-blend-fbx-gltf-file-formats--boys-male-man-pack-avatars-icons-5187865.png?f=webp" },
+  { id: 4, name: "Sophia", points: 980, avatar: "https://cdn3d.iconscout.com/3d/premium/thumb/boy-avatar-3d-icon-download-in-png-blend-fbx-gltf-file-formats--boys-male-man-pack-avatars-icons-5187865.png?f=webp" },
+  { id: 5, name: "Daniel", points: 920, avatar: "https://cdn3d.iconscout.com/3d/premium/thumb/boy-avatar-3d-icon-download-in-png-blend-fbx-gltf-file-formats--boys-male-man-pack-avatars-icons-5187865.png?f=webp" },
+  { id: 6, name: "Olivia", points: 890, avatar: "https://cdn3d.iconscout.com/3d/premium/thumb/boy-avatar-3d-icon-download-in-png-blend-fbx-gltf-file-formats--boys-male-man-pack-avatars-icons-5187865.png?f=webp" },
+  { id: 7, name: "William", points: 850, avatar: "https://cdn3d.iconscout.com/3d/premium/thumb/boy-avatar-3d-icon-download-in-png-blend-fbx-gltf-file-formats--boys-male-man-pack-avatars-icons-5187865.png?f=webp" },
+  { id: 8, name: "Ava", points: 820, avatar: "https://cdn3d.iconscout.com/3d/premium/thumb/boy-avatar-3d-icon-download-in-png-blend-fbx-gltf-file-formats--boys-male-man-pack-avatars-icons-5187865.png?f=webp" },
+  { id: 9, name: "James", points: 800, avatar: "https://cdn3d.iconscout.com/3d/premium/thumb/boy-avatar-3d-icon-download-in-png-blend-fbx-gltf-file-formats--boys-male-man-pack-avatars-icons-5187865.png?f=webp" },
+  { id: 10, name: "Isabella", points: 780, avatar: "https://cdn3d.iconscout.com/3d/premium/thumb/boy-avatar-3d-icon-download-in-png-blend-fbx-gltf-file-formats--boys-male-man-pack-avatars-icons-5187865.png?f=webp" },
 ]
 
 export default function Leaderboard() {
