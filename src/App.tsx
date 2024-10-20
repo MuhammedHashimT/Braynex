@@ -40,7 +40,7 @@ export default function EnhancedBraynexHome() {
             </div>
               <span className="text-2xl font-bold text-gray-900">Braynex</span>
             </motion.div>
-            <div className="hidden md:flex space-x-8">
+            {/* <div className="hidden md:flex space-x-8">
               {['Features', 'Testimonials', 'About'].map((item) => (
                 <motion.a
                   key={item}
@@ -52,7 +52,7 @@ export default function EnhancedBraynexHome() {
                   {item}
                 </motion.a>
               ))}
-            </div>
+            </div> */}
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -77,7 +77,7 @@ export default function EnhancedBraynexHome() {
             exit={{ opacity: 0, height: 0 }}
           >
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              {['Features', 'Testimonials', 'About'].map((item) => (
+              {['Features', 'About'].map((item) => (
                 <a
                   key={item}
                   href={`#${item.toLowerCase()}`}
@@ -238,7 +238,7 @@ export default function EnhancedBraynexHome() {
                 and engaged, no matter where you are in your career journey.
               </p>
               <ul className="space-y-4">
-                <ListItem text="Adaptive learning paths that evolve with you" />
+                <ListItem text="Adaptive learning paths that evolve with you"/>
                 <ListItem text="Real-world projects and case studies" />
                 <ListItem text="Continuous feedback and skill assessment" />
                 <ListItem text="Flexible learning schedule to fit your lifestyle" />
@@ -358,7 +358,7 @@ function ListItem({ text }:any) {
       whileHover={{ x: 5 }}
     >
       <ChevronRight className="h-5 w-5 text-blue-600 mr-2" />
-      {/* <span className="text-gray-700">{span}</span> */}
+      <span className="text-gray-700">{text}</span>
     </motion.li>
   )
 }
