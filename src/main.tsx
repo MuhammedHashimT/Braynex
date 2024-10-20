@@ -10,6 +10,7 @@ import Login from "./components/LoginSupa.tsx";
 import StudentDashboard from './routes/StudentDashboard.tsx';
 import QuizPage from './routes/Quiz.tsx';
 import AdminDashboard from './routes/AdminDashboard.tsx';
+import SignupPage from "./routes/Signup.tsx";
 
 const router = createBrowserRouter([
   {
@@ -35,7 +36,12 @@ const router = createBrowserRouter([
   {
     path: "/admin",
     element: <AdminDashboard />,
-    // errorElement: <ErrorPage />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/signup",
+    element: <SignupPage />,
+    errorElement: <ErrorPage />,
   }
 ]);
 
