@@ -6,7 +6,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import LoginPage from "./components/Login.tsx";
 import ErrorPage from "./components/Error.tsx";
 import { AuthProvider } from "./context/AuthContext.tsx";
-import Login from "./components/LoginSupa.tsx";
+// import Login from "./components/LoginSupa.tsx";
 import StudentDashboard from './routes/StudentDashboard.tsx';
 import QuizPage from './routes/Quiz.tsx';
 import Leaderboard from "./routes/LeaderBoard.tsx";
