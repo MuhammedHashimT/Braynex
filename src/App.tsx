@@ -112,7 +112,7 @@ export default function EnhancedBraynexHome() {
                 Experience adaptive learning tailored to your unique career goals.
               </p>
               <motion.a
-                href="#"
+                href="/signup"
                 className="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition duration-300 inline-flex items-center"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -260,7 +260,7 @@ export default function EnhancedBraynexHome() {
           <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Career?</h2>
           <p className="text-xl mb-8">Join Braynex today and start your personalized learning journey.</p>
           <motion.a 
-            href="#" 
+            href="/signup" 
             className="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300 inline-flex items-center"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
