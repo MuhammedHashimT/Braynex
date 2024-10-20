@@ -29,11 +29,11 @@ const initialMessages: Message[] = [
 ]
 
 const users: User[] = [
-  { id: 1, name: 'Dr. Smith', avatar: '/placeholder.svg?height=40&width=40', isMentor: true, isOnline: true, lastMessage: 'Of course, Bob. What\'s your question?' },
-  { id: 2, name: 'Alice', avatar: '/placeholder.svg?height=40&width=40', isOnline: true, lastMessage: 'Hi Dr. Smith! I\'m doing well, thanks for asking.' },
-  { id: 3, name: 'Bob', avatar: '/placeholder.svg?height=40&width=40', isOnline: false, lastMessage: 'I have a question about the last assignment. Can we discuss it?' },
-  { id: 4, name: 'Charlie', avatar: '/placeholder.svg?height=40&width=40', isOnline: true, lastMessage: 'Thanks for the clarification!' },
-  { id: 5, name: 'Diana', avatar: '/placeholder.svg?height=40&width=40', isOnline: false, lastMessage: 'See you in class tomorrow.' },
+  { id: 1, name: 'Dr. Smith', avatar: 'https://cdn3d.iconscout.com/3d/premium/thumb/woman-avatar-3d-icon-download-in-png-blend-fbx-gltf-file-formats--profile-character-pack-avatars-icons-5187873.png', isMentor: true, isOnline: true, lastMessage: 'Of course, Bob. What\'s your question?' },
+  { id: 2, name: 'Alice', avatar: 'https://cdn3d.iconscout.com/3d/premium/thumb/woman-avatar-3d-icon-download-in-png-blend-fbx-gltf-file-formats--profile-character-pack-avatars-icons-5187873.png', isOnline: true, lastMessage: 'Hi Dr. Smith! I\'m doing well, thanks for asking.' },
+  { id: 3, name: 'Bob', avatar: 'https://cdn3d.iconscout.com/3d/premium/thumb/woman-avatar-3d-icon-download-in-png-blend-fbx-gltf-file-formats--profile-character-pack-avatars-icons-5187873.png', isOnline: false, lastMessage: 'I have a question about the last assignment. Can we discuss it?' },
+  { id: 4, name: 'Charlie', avatar: 'https://cdn3d.iconscout.com/3d/premium/thumb/woman-avatar-3d-icon-download-in-png-blend-fbx-gltf-file-formats--profile-character-pack-avatars-icons-5187873.png', isOnline: true, lastMessage: 'Thanks for the clarification!' },
+  { id: 5, name: 'Diana', avatar: 'https://cdn3d.iconscout.com/3d/premium/thumb/woman-avatar-3d-icon-download-in-png-blend-fbx-gltf-file-formats--profile-character-pack-avatars-icons-5187873.png', isOnline: false, lastMessage: 'See you in class tomorrow.' },
 ]
 
 export default function RedesignedStudentChat() {
@@ -82,7 +82,7 @@ export default function RedesignedStudentChat() {
                 onClick={() => setSelectedUser(user)}
               >
                 <div className="relative flex-shrink-0">
-                  <img src={user.avatar} alt={user.name} className="w-12 h-12 rounded-full" />
+                  <img src={`https://cdn3d.iconscout.com/3d/premium/thumb/woman-avatar-3d-icon-download-in-png-blend-fbx-gltf-file-formats--profile-character-pack-avatars-icons-5187873.png`} alt={user.name} className="w-12 h-12 rounded-full" />
                   <span
                     className={`absolute bottom-0 right-0 w-3 h-3 border-2 border-white rounded-full ${
                       user.isOnline ? 'bg-green-500' : 'bg-gray-400'
