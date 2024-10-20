@@ -9,6 +9,10 @@ import { AuthProvider } from "./context/AuthContext.tsx";
 import Login from "./components/LoginSupa.tsx";
 import StudentDashboard from './routes/StudentDashboard.tsx';
 import QuizPage from './routes/Quiz.tsx';
+import Leaderboard from "./routes/LeaderBoard.tsx";
+import UserProfile from "./routes/UserShowPage.tsx";
+import TaskPage from "./routes/TaskPage.tsx";
+import { CelebrationExample } from "./routes/Celebration.tsx";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +33,27 @@ const router = createBrowserRouter([
   {
     path: "/quiz",
     element: <QuizPage />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/Leaderboard",
+    element: <Leaderboard />,
+    errorElement: <ErrorPage />,
+  },
+  // user/:id
+  {
+    path: "/user/:id",
+    element: <UserProfile />,
+    errorElement: <ErrorPage />,  
+  },
+  {
+    path: "/task",
+    element: <TaskPage />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/celebrate",
+    element: <CelebrationExample />,
     errorElement: <ErrorPage />,
   }
 ]);
