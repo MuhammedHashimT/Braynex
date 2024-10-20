@@ -55,8 +55,6 @@ export default function EnhancedStudentDashboard() {
   const [showAllTasks, setShowAllTasks] = useState(false)
   const [showMentorMessage, setShowMentorMessage] = useState(false)
 
-  const navigate = useNavigate()
-
   useEffect(() => {
     const newLeaderboard = [...leaderboardData, { name: "You", points: points, avatar: "/placeholder.svg?height=40&width=40" }]
     newLeaderboard.sort((a, b) => b.points - a.points)
@@ -79,6 +77,8 @@ export default function EnhancedStudentDashboard() {
     const lowestProgressTask = uncompletedTasks.reduce((min, task) => task.progress < min.progress ? task : min)
     return `Focus on ${lowestProgressTask.subject}: ${lowestProgressTask.name}`
   }
+
+  const navigate = useNavigate()
 
   return (
     <div className="min-h-screen bg-gray-100 font-sans">
@@ -241,7 +241,9 @@ export default function EnhancedStudentDashboard() {
                 </div>
               </div>
               <button
-                onClick={() => setShowMentorMessage(!showMentorMessage)}
+                onClick={() => {setShowMentorMessage(!showMentorMessage)
+                  navigate('/chat')
+                }}
                 className="w-full bg-[#1cb0f6] hover:bg-[#0c9fe6] text-white py-2 rounded-lg transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-[#1cb0f6] focus:ring-opacity-50 flex items-center justify-center"
               >
                 <MessageCircle className="mr-2" />
