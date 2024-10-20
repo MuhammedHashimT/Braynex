@@ -102,7 +102,10 @@ export default function EnhancedStudentDashboard() {
               <p className="text-sm text-gray-600">Day Streak</p>
             </div>
             <button
-              onClick={earnPoints}
+              onClick={()=>{
+                // earnPoints
+                navigate('/quiz')
+              }}
               className="px-4 py-2 bg-[#58cc02] hover:bg-[#4caf00] text-white rounded-full transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-[#58cc02] focus:ring-opacity-50"
             >
               Practice Now
