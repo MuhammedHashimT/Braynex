@@ -8,7 +8,7 @@ export default function LoginPage() {
     <div className="min-h-screen flex items-center justify-center bg-white">
       <div className="w-full max-w-md p-8 border rounded-lg">
         <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-primary-blue mb-2">LearnSphere</h1>
+          <h1 className="text-4xl font-bold text-primary-blue mb-2">Braynex</h1>
           <p className="text-gray-600">Your Personalized Learning Journey</p>
         </div>
         <form className="space-y-6">
